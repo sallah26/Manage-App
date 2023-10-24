@@ -1,3 +1,5 @@
+<!-- Startup runner code from terminal -->
+<!-- npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,8 +7,264 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="output.css" />
+    <!-- Fontawesome cdn link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
   </head>
+  <style>
+    .custom-width {
+      width: 160px; /* Set your desired width here */
+      margin-left: 100px;
+    }
+  </style>
   <body>
-    <h1 class="bg-green-600 text-center">Hello Tailwind css!</h1>
+    <div
+      class="container bg-[url('../images/image.png')] bg-cover min-h-screen bg-center min-w-full px-28 py-5 relative xs:px-5"
+    >
+      <nav class="flex">
+        <img
+          src="../images/logo.png"
+          class="w-40 xs:h-10 xs:w-28 cursor-pointer mt-2 xs:left-2"
+          alt="logo"
+        />
+
+        <div class="relative">
+          <!-- Dropdown button -->
+          <button
+            class="px-2 bg-gray-700 text-gray-300 rounded-md text-sm md:hidden py-1 m-3 ml-20 mt-5"
+            id="dropdown-trigger"
+          >
+            G-Services
+            <i class="fas fa-chevron-down mr-1"></i>
+          </button>
+          <ul
+            class="absolute hidden mt-2 py-2 bg-gray-800 text-gray-300 custom-width rounded-md shadow-lg xs:p-0"
+            id="dropdown-menu"
+          >
+            <!-- Dropdown menu items -->
+            <li class="list-none inline-block mt-6 px-5">
+              <a
+                href="#"
+                class="no-underline text-teal-50 hover:text-teal-900 px-2"
+                >Home</a
+              >
+            </li>
+            <li class="list-none inline-block mt-6 px-5">
+              <a
+                href="#"
+                class="no-underline hover:text-teal-900 text-teal-50 px-2"
+                >Blogs</a
+              >
+            </li>
+            <li class="list-none inline-block mt-6 px-5">
+              <a
+                href="#"
+                class="no-underline hover:text-teal-900 text-teal-50 px-2"
+                >Features</a
+              >
+            </li>
+            <li class="list-none inline-block mt-6 px-5">
+              <a
+                href="#"
+                class="no-underline hover:text-teal-900 text-teal-50 px-2"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+        <ul class="flex-1 text-center xs:hidden md:flex xl:justify-center">
+          <li class="list-none inline-block mt-6 px-5">
+            <a
+              href="#"
+              class="no-underline text-teal-50 hover:text-teal-900 px-2"
+              >Home</a
+            >
+          </li>
+          <li class="list-none inline-block mt-6 px-5">
+            <a
+              href="#"
+              class="no-underline hover:text-teal-900 text-teal-50 px-2"
+              >Blogs</a
+            >
+          </li>
+          <li class="list-none inline-block mt-6 px-5">
+            <a
+              href="#"
+              class="no-underline hover:text-teal-900 text-teal-50 px-2"
+              >Features</a
+            >
+          </li>
+          <li class="list-none inline-block mt-6 px-5">
+            <a
+              href="#"
+              class="no-underline hover:text-teal-900 text-teal-50 px-2"
+              >Contact</a
+            >
+          </li>
+        </ul>
+        <img
+          src="../images/cart.png"
+          alt=""
+          class="mt-2 w-7 h-10 cursor-pointer xs:w-5 xs:h-7 xs:m-4"
+        />
+      </nav>
+      <div class="text-white my-32 mx-5">
+        <h1 class="font-bold text-6xl">
+          Groceries <br />
+          delivery in
+          <span class="text-yellow-400 underline font-mono text-5xl"
+            >15 mins</span
+          >
+        </h1>
+        <p class="mt-3">
+          Grocify offer a wide range of products, incuding fresh products, meats
+          <br />
+          dairy, baked goods and non-perishable items.
+        </p>
+        <div class="py-6">
+          <a
+            href="#"
+            class="bg-yellow-400 rounded-3xl py-2 px-4 text-gray-700 border transition hover:delay-30 duration-300 transform border-white hover:text-white hover:border-pink hover:bg-transparent text-center font-bold inline-block"
+            >Oreder Now <i class="fas fa-shopping-cart"></i
+          ></a>
+          <a
+            href="#"
+            class="ml-5 bg-yellow-400 rounded-3xl py-2 px-4 transition hover:delay-30 duration-300 transform text-gray-700 hover:text-white hover:bg-transparent border border-white hover:border-white text-center font-bold inline-block"
+            >Download APP <i class="fas fa-cloud-download-alt"></i
+          ></a>
+        </div>
+      </div>
+      <img
+        src="../images/grocery-image.png"
+        class="bottom-0 right-2 xl:absolute py-0 lg:w-3/6 w-90"
+        alt=""
+      />
+    </div>
+    <!-- Products page -->
+    <h1>hello world</h1>
+    <div class="container p-11">
+      <h1 class="text-3xl font-bold mt-8 mb-4">Products</h1>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+        <!-- Product Cards will go here -->
+        <div class="relative">
+          <div
+            class="absolute inset-0 bg-gray-900 bg-opacity-50 flex flex-col justify-center items-center opacity-0 transition-opacity duration-300 hover:opacity-100"
+          >
+            <h2 class="text-white text-lg font-semibold mb-2">Product Title</h2>
+            <p class="text-white">Additional Text</p>
+          </div>
+          <div
+            class="bg-white rounded-lg shadow-lg p-4 transition-transform transform-gpu hover:scale-105"
+          >
+            <!-- Card Content -->
+            <img
+              src="../images/avocado.jpg"
+              alt="Product Image"
+              class="w-full h-48 object-cover mb-4"
+            />
+          </div>
+        </div>
+        <div
+          class="bg-white rounded-lg shadow-lg p-4 bg-[url('../images/avocado.jpg')] bg-cover hover:bg-slate-600"
+        >
+          <!-- Card Content -->
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia est
+          doloremque non ut ipsam cumque eligendi! Aliquam fuga, qui,
+          consectetur dignissimos illum atque, animi omnis minima voluptatibus
+          excepturi rerum sed!
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg p-4">
+          <!-- Card Content -->
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia est
+          doloremque non ut ipsam cumque eligendi! Aliquam fuga, qui,
+          consectetur dignissimos illum atque, animi omnis minima voluptatibus
+          excepturi rerum sed!
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg p-4">
+          <!-- Card Content -->
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia est
+          doloremque non ut ipsam cumque eligendi! Aliquam fuga, qui,
+          consectetur dignissimos illum atque, animi omnis minima voluptatibus
+          excepturi rerum sed!
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg p-4">
+          <!-- Card Content -->
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia est
+          doloremque non ut ipsam cumque eligendi! Aliquam fuga, qui,
+          consectetur dignissimos illum atque, animi omnis minima voluptatibus
+          excepturi rerum sed!
+        </div>
+        <div class="bg-white rounded-lg shadow-lg p-4">
+          <!-- Card Content -->
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia est
+          doloremque non ut ipsam cumque eligendi! Aliquam fuga, qui,
+          consectetur dignissimos illum atque, animi omnis minima voluptatibus
+          excepturi rerum sed!
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg p-4">
+          <!-- Card Content -->
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia est
+          doloremque non ut ipsam cumque eligendi! Aliquam fuga, qui,
+          consectetur dignissimos illum atque, animi omnis minima voluptatibus
+          excepturi rerum sed!
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg p-4">
+          <!-- Card Content -->
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia est
+          doloremque non ut ipsam cumque eligendi! Aliquam fuga, qui,
+          consectetur dignissimos illum atque, animi omnis minima voluptatibus
+          excepturi rerum sed!
+        </div>
+        <div class="bg-white rounded-lg shadow-lg p-4">
+          <!-- Card Content -->
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia est
+          doloremque non ut ipsam cumque eligendi! Aliquam fuga, qui,
+          consectetur dignissimos illum atque, animi omnis minima voluptatibus
+          excepturi rerum sed!
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg p-4">
+          <!-- Card Content -->
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia est
+          doloremque non ut ipsam cumque eligendi! Aliquam fuga, qui,
+          consectetur dignissimos illum atque, animi omnis minima voluptatibus
+          excepturi rerum sed!
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg p-4">
+          <!-- Card Content -->
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia est
+          doloremque non ut ipsam cumque eligendi! Aliquam fuga, qui,
+          consectetur dignissimos illum atque, animi omnis minima voluptatibus
+          excepturi rerum sed!
+        </div>
+      </div>
+    </div>
   </body>
 </html>
+<script>
+  const trigger = document.getElementById("dropdown-trigger");
+  const menu = document.getElementById("dropdown-menu");
+
+  trigger.addEventListener("click", function () {
+    menu.classList.toggle("hidden");
+    menu.classList.toggle("fade-in");
+  });
+
+  // Close the dropdown when clicking outside
+  document.addEventListener("click", function (event) {
+    const isInsideDropdown =
+      trigger.contains(event.target) || menu.contains(event.target);
+    if (!isInsideDropdown) {
+      menu.classList.add("hidden");
+      menu.classList.remove("fade-in");
+    }
+  });
+</script>
